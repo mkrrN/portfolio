@@ -1,0 +1,804 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+
+
+body::-webkit-scrollbar { width: 0; }
+body {
+  background-color: #000;
+}
+
+.progress-bar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 0%;
+  height: 5px;
+  background-color: tomato;
+  box-shadow: 0 0 20px 5px tomato;
+  border-radius: 1px;
+}
+
+// Шапка (HEADER)
+.header {
+  &-block {
+    &-left {
+      border-radius: 0 0 10px 0;
+      float: left;
+      background-color: #fff;
+      text-align: center;
+      width: 345px;
+      height: 140px;
+      &-line {
+        border-bottom: 1px solid #000;
+        width: 80%;
+        margin-left: 3.5rem;
+        margin-bottom: 1rem;
+      }
+      h1 {
+        font-family: 'Lato', sans-serif;
+        font-weight: 700;
+      }
+      p {
+        font-family: 'Lato', sans-serif;
+        font-weight: 700;
+        color: gray;
+        letter-spacing: 1px;
+      }
+    }
+    &-right {
+      border-radius: 0 0 0 10px;
+      float: right;
+      background-color: #fff;
+      width: 345px;
+      height: 140px;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      img {
+        width: 100px;
+        height: 100px;
+        margin-left: 0rem;
+        margin-top: -1rem;
+      }
+    }
+    &-btn {
+      display: flex;
+      margin-bottom: 1rem;
+      h1 {
+        padding-bottom: 15px;
+        font-size: 65px;
+      }
+      &-ru {
+        font-family: 'Lato', sans-serif;
+        font-size: 40px;
+        font-weight: 700;
+        text-decoration: none;
+        text-transform: uppercase;
+        color: gray;
+        padding-top: 3rem;
+        padding-right: 1rem;
+        padding-left: 1rem;
+        &:hover {
+          text-decoration: none;
+          color: gray;
+        }
+        &-active {
+          scale: 120%;
+          color: #000;
+          &:hover {
+            color: #000;
+          }
+        }
+      }
+      &-en {
+        font-family: 'Lato', sans-serif;
+        font-size: 40px;
+        font-weight: 700;
+        text-decoration: none;
+        text-transform: uppercase;
+        color: gray;
+        padding-top: 3rem;
+        padding-right: 1rem;
+        padding-left: 1rem;
+        &:hover {
+          text-decoration: none;
+          color: gray;
+        }
+        &-active {
+          scale: 120%;
+          color: #000;
+          &:hover {
+            color: #000;
+          }
+        }
+      }
+      
+    }
+  }
+  &-body {
+    text-align: center;
+    padding-top: 22rem;
+    h1 {
+      font-family: 'Lato', sans-serif;
+      font-size: 60px;
+      font-weight: 700;
+      color: #fff;
+    }
+    p {
+      font-family: 'Lato', sans-serif;
+      font-size: 22px;
+      font-weight: 400;
+      color: #fff;
+      margin-top: 7rem;
+      margin-bottom: 10rem;
+      width: 80%;
+      margin-left: 10%;
+    }
+    &-line {
+      border-bottom: 1px solid #fff;
+      width: 80%;
+      margin-left: 10%;
+    }
+  }
+}
+
+
+
+// Тело (BODY)
+.body {
+  text-align: center;
+  &-block {
+    h1 {
+      font-family: 'Lato', sans-serif;
+      font-weight: 700;
+      font-size: 40px;
+      text-transform: uppercase;
+      margin-top: 10rem;
+      color: #fff;
+    }
+    &-image {
+      display: inline-block;
+      width: 25rem;
+      height: 25rem;
+      background-color: #fff;
+      border-radius: 5px;
+      margin-top: 4rem;
+      // margin-left: 50.5rem;
+      img {
+        width: 22rem;
+        height: 22rem;
+        border-radius: 5px;
+        padding-top: 1.5rem;
+      }
+    }
+    p {
+      font-family: 'Lato', sans-serif;
+      font-weight: 400;
+      font-size: 22px;
+      margin-top: 5rem;
+      color: #fff;
+    }
+    button {
+      width: 250px;
+      height: 80px;
+      border-radius: 5px;
+      background-color: #000;
+      border: 2px solid #fff;
+      color: #fff;
+      text-transform: uppercase;
+      font-family: 'Lato', sans-serif;
+      font-weight: 700;
+      font-size: 30px;
+      margin-top: 2rem;
+      &:hover {
+        box-shadow: 0 0 20px 5px tomato;
+        border-color: tomato;
+        color: tomato;
+      }
+    }
+    &-line {
+      border-bottom: 1px solid #fff;
+      width: 80%;
+      margin-left: 10%;
+      margin-top: 9rem;
+    }
+  }
+}
+
+// Подвал (FOOTER)
+.footer {
+  display: flex;
+  justify-content: center;
+  &-block {
+    width: 1057px;
+    height: 157px;
+    text-align: center;
+    background-color: #fff;
+    border-radius: 10px 10px 0 0;
+    margin-top: 12rem;
+    h1 {
+      font-family: 'Lato', sans-serif;
+      font-size: 50px;
+      font-weight: 700;
+      color: #000;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      padding-top: 3.3rem;
+    }
+  }
+}
+
+// 320 px
+@media (min-width: 320px) and (max-width: 425px) {
+  //Шапка
+  .header {
+    &-block {
+      // Левый блок шапки с именем
+      &-left {
+        width: 50%;
+        height: 70px;
+        border-radius: 0;
+        &-line {
+          margin-left: 1.7rem;
+        }
+        h1 {
+          font-size: 16px;
+          margin-top: 1rem;
+        }
+        p {
+          font-size: 9px;
+          letter-spacing: 0.5px;
+        }
+      }
+      // Правый блок шапки с кнопкой и лого
+      &-right {
+        width: 50%;
+        height: 70px;
+        border-radius: 0;
+        img {
+          width: 50px;
+          height: 50px;
+        }
+      }
+      &-btn {
+        h1 {
+          padding-bottom: 15px;
+          font-size: 30px;
+        }
+        &-ru,
+        &-en {
+          font-size: 22px;
+          padding-top: 2.2rem;
+          padding-right: 1rem;
+          padding-left: 1rem;
+        }
+      }
+    }
+    &-body {
+      padding-top: 10rem;
+      h1 {
+        font-size: 30px;
+      }
+      p {
+        font-size: 12px;
+        font-weight: 400;
+        margin-top: 4rem;
+        margin-bottom: 3rem;
+      }
+    }
+  }
+  // Кнопка языка
+  .ru-btn {
+    a {
+      font-size: 20px;
+    }
+  }
+  .en-btn {
+    a {
+      font-size: 20px;
+    }
+  }
+  .active-btn {
+    scale: 100%;
+  }
+  
+  // Тело
+  .body {
+    &-block {
+      h1 {
+        display: inline-block;
+        font-size: 20px;
+        margin-top: 4rem;
+        width: 30rem;
+      }
+      &-image {
+        margin-left: 0rem;
+      }
+      p {
+        font-size: 12px;
+        margin-top: 2rem;
+      }
+      button {
+        width: 120px;
+        height: 50px;
+        font-size: 15px;
+        margin-top: 1rem;
+      }
+      &-line {
+        margin-top: 4rem;
+      }
+    }
+  }
+     // Подвал (FOOTER)
+  .footer {
+    &-block {
+      width: 80%;
+      height: 70px;
+      margin-top: 4rem;
+      h1 {
+        font-size: 18px;
+        padding-top: 1rem;
+      }
+    }
+  }
+}
+
+// 320 px
+@media (min-width: 375px) and (max-width: 425px) {
+  //Шапка
+  .header {
+    &-block {
+      // Левый блок шапки с именем
+      &-left {
+        width: 50%;
+        height: 90px;
+        border-radius: 0;
+        &-line {
+          margin-left: 1.7rem;
+        }
+        h1 {
+          display: inline-block;
+          font-size: 18px;
+          margin-top: 1.5rem;
+        }
+        p {
+          font-size: 11px;
+          letter-spacing: 0.5px;
+        }
+      }
+      // Правый блок шапки с кнопкой и лого
+      &-right {
+        width: 50%;
+        height: 90px;
+        border-radius: 0;
+        img {
+          width: 50px;
+          height: 50px;
+        }
+      }
+      &-btn {
+        h1 {
+          padding-bottom: 15px;
+          font-size: 30px;
+        }
+      }
+    }
+    &-body {
+      padding-top: 10rem;
+      h1 {
+        font-size: 32px;
+      }
+      p {
+        font-size: 14px;
+        font-weight: 400;
+        margin-top: 4rem;
+        margin-bottom: 3rem;
+      }
+    }
+  }
+  // Кнопка языка
+  .ru-btn {
+    a {
+      font-size: 22px;
+    }
+  }
+  .en-btn {
+    a {
+      font-size: 22px;
+    }
+  }
+  .active-btn {
+    scale: 100%;
+  }
+  
+  // Тело
+  .body {
+    &-block {
+      h1 {
+        font-size: 22px;
+        margin-top: 4rem;
+        width: 30rem;
+      }
+      p {
+        font-size: 14px;
+        margin-top: 2rem;
+      }
+      button {
+        width: 120px;
+        height: 50px;
+        font-size: 15px;
+        margin-top: 1rem;
+      }
+      &-line {
+        margin-top: 4rem;
+      }
+    }
+  }
+     // Подвал (FOOTER)
+  .footer {
+    &-block {
+      width: 80%;
+      height: 70px;
+      margin-top: 4rem;
+      h1 {
+        font-size: 20px;
+        padding-top: 0.5rem;
+      }
+    }
+  }
+}
+
+@media (min-width: 425px) and (max-width: 554px) {
+  //Шапка
+  .header {
+    &-block {
+      // Левый блок шапки с именем
+      &-left {
+        width: 50%;
+        height: 90px;
+        border-radius: 0;
+        &-line {
+          margin-left: 1.7rem;
+        }
+        h1 {
+          display: inline-block;
+          font-size: 18px;
+          margin-top: 1.5rem;
+        }
+        p {
+          font-size: 11px;
+          letter-spacing: 0.5px;
+        }
+      }
+      // Правый блок шапки с кнопкой и лого
+      &-right {
+        width: 50%;
+        height: 90px;
+        border-radius: 0;
+        img {
+          width: 50px;
+          height: 50px;
+        }
+      }
+      &-btn {
+        h1 {
+          padding-bottom: 15px;
+          font-size: 30px;
+        }
+        &-ru,
+        &-en {
+          font-size: 18px;
+          padding-top: 2.5rem;
+          padding-right: 0.5rem;
+          padding-left: 0.5rem;
+        }
+      }
+    }
+    &-body {
+      padding-top: 10rem;
+      h1 {
+        font-size: 32px;
+      }
+      p {
+        font-size: 14px;
+        font-weight: 400;
+        margin-top: 4rem;
+        margin-bottom: 3rem;
+      }
+    }
+  }
+  // Кнопка языка
+  .ru-btn {
+    a {
+      font-size: 22px;
+    }
+  }
+  .en-btn {
+    a {
+      font-size: 22px;
+    }
+  }
+  .active-btn {
+    scale: 100%;
+  }
+  
+  // Тело
+  .body {
+    &-block {
+      h1 {
+        display: inline-block;
+        font-size: 22px;
+        margin-top: 4rem;
+        width: 30rem;
+      }
+      p {
+        font-size: 14px;
+        margin-top: 2rem;
+      }
+      button {
+        width: 120px;
+        height: 50px;
+        font-size: 15px;
+        margin-top: 1rem;
+      }
+      &-line {
+        margin-top: 4rem;
+      }
+    }
+  }
+     // Подвал (FOOTER)
+  .footer {
+    &-block {
+      width: 80%;
+      height: 70px;
+      margin-top: 4rem;
+      h1 {
+        font-size: 20px;
+        padding-top: 0.5rem;
+      }
+    }
+  }
+}
+
+@media (min-width: 554px) and (max-width: 748px) {
+  //Шапка
+  .header {
+    &-block {
+      // Левый блок шапки с именем
+      &-left {
+        width: 50%;
+        height: 90px;
+        border-radius: 0;
+        &-line {
+          margin-left: 1.7rem;
+        }
+        h1 {
+          display: inline-block;
+          font-size: 18px;
+          margin-top: 1.5rem;
+        }
+        p {
+          font-size: 11px;
+          letter-spacing: 0.5px;
+        }
+      }
+      // Правый блок шапки с кнопкой и лого
+      &-right {
+        width: 50%;
+        height: 90px;
+        border-radius: 0;
+        img {
+          width: 50px;
+          height: 50px;
+        }
+      }
+      &-btn {
+        h1 {
+          padding-bottom: 15px;
+          font-size: 30px;
+        }
+        &-ru,
+        &-en {
+          font-size: 22px;
+          padding-top: 2.2rem;
+          padding-right: 1rem;
+          padding-left: 1rem;
+        }
+      }
+    }
+    &-body {
+      padding-top: 10rem;
+      h1 {
+        font-size: 32px;
+      }
+      p {
+        font-size: 14px;
+        font-weight: 400;
+        margin-top: 4rem;
+        margin-bottom: 3rem;
+      }
+    }
+  }
+  // Кнопка языка
+  .ru-btn {
+    a {
+      font-size: 22px;
+    }
+  }
+  .en-btn {
+    a {
+      font-size: 22px;
+    }
+  }
+  .active-btn {
+    scale: 100%;
+  }
+  
+  // Тело
+  .body {
+    &-block {
+      h1 {
+        display: inline-block;
+        font-size: 22px;
+        margin-top: 4rem;
+        width: 50rem;
+      }
+      p {
+        font-size: 14px;
+        margin-top: 2rem;
+      }
+      button {
+        width: 120px;
+        height: 50px;
+        font-size: 15px;
+        margin-top: 1rem;
+      }
+      &-line {
+        margin-top: 4rem;
+      }
+    }
+  }
+     // Подвал (FOOTER)
+  .footer {
+    &-block {
+      width: 80%;
+      height: 70px;
+      margin-top: 4rem;
+      h1 {
+        font-size: 20px;
+        padding-top: 0.5rem;
+      }
+    }
+  }
+}
+
+@media (min-width: 1900px) and (max-width: 2560px) {
+  //Шапка
+  .header {
+    &-block {
+      // Левый блок шапки с именем
+      &-left {
+        width: 30%;
+        height: 250px;
+        border-radius: 0 0 10px 0;
+        &-line {
+          margin-left: 5rem;
+        }
+        h1 {
+          display: inline-block;
+          font-size: 54px;
+          margin-top: 4.5rem;
+        }
+        p {
+          font-size: 33px;
+          letter-spacing: 0.5px;
+        }
+      }
+      // Правый блок шапки с кнопкой и лого
+      &-right {
+        width: 30%;
+        height: 250px;
+        border-radius: 0 0 0 10px;
+        img {
+          width: 200px;
+          height: 200px;
+        }
+      }
+      &-btn {
+        h1 {
+          padding-bottom: 15px;
+          font-size: 120px;
+        }
+        &-ru,
+        &-en {
+          font-size: 66px;
+          padding-top: 3.5rem;
+          padding-right: 1rem;
+          padding-left: 1rem;
+        }
+      }
+    }
+    &-body {
+      padding-top: 40rem;
+      h1 {
+        font-size: 96px;
+      }
+      p {
+        font-size: 42px;
+        font-weight: 400;
+        margin-top: 14rem;
+        margin-bottom: 9rem;
+      }
+    }
+  }
+  // Кнопка языка
+  .ru-btn {
+    a {
+      font-size: 88px;
+    }
+  }
+  .en-btn {
+    a {
+      font-size: 88px;
+    }
+  }
+  .active-btn {
+    scale: 120%;
+  }
+  
+  // Тело
+  .body {
+    &-block {
+      h1 {
+        display: inline-block;
+        font-size: 66px;
+        margin-top: 12rem;
+        width: 200rem;
+      }
+      &-image {
+      display: inline-block;
+      width: 75rem;
+      height: 75rem;
+      background-color: #fff;
+      border-radius: 5px;
+      margin-top: 12rem;
+      img {
+        width: 66rem;
+        height: 66rem;
+        border-radius: 5px;
+        padding-top: 4.5rem;
+      }
+      }
+      p {
+        font-size: 42px;
+        margin-top: 6rem;
+        width: 252rem;
+      }
+      button {
+        width: 320px;
+        height: 140px;
+        font-size: 45px;
+        margin-top: 3rem;
+      }
+      &-line {
+        margin-top: 12rem;
+      }
+    }
+  }
+     // Подвал (FOOTER)
+  .footer {
+    &-block {
+      width: 80%;
+      height: 12rem;
+      margin-top: 4rem;
+      h1 {
+        font-size: 60px;
+        padding-top: 0.5rem;
+      }
+    }
+  }
+}
+
+
+
+
+
